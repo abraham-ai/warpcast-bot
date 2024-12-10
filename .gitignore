@@ -1,0 +1,15 @@
+# Node modules
+node_modules/
+dist/
+.env
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Logs
+logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
