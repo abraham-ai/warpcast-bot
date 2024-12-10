@@ -10,28 +10,15 @@ This project demonstrates how to publish Farcaster casts using [Neynar](https://
   You need a valid signer that has been approved on-chain. Neynar provides tools to get a signer and instructions to approve it.  
   For more info on how to obtain the `SIGNER_UUID`, see the Neynar documentation.
 
-````markdown
-# Farcaster Bot with Neynar
-
-This project demonstrates how to publish Farcaster casts using [Neynar](https://github.com/neynar) through a Node.js & TypeScript Express server. It provides a `/cast` endpoint to which you can POST a JSON payload containing a `text` field, and it will publish that text as a Farcaster cast on behalf of the specified signer.
-
-## Prerequisites
-
-- **Farcaster FID & Approved Signer**:  
-  You need a valid Farcaster identity (FID) and a signer that has been approved on-chain. Neynar provides tools to create a signer and instructions to approve it. You must complete that process and have a `SIGNER_UUID` that references a fully approved Farcaster signer.
-
-- **Neynar API Key**:  
-  You need an API key from Neynar to authenticate your requests. This key grants your application access to Neynar’s casting functionalities.
-
 ## Getting Started
 
 1. **Clone the Repository or Copy Files**  
    If you have these files in a directory, you can skip this step. Otherwise:
+
    ```bash
    git clone https://github.com/example/your-repo.git
    cd your-repo
    ```
-````
 
 2. **Install Dependencies**  
    Ensure you have Node.js (LTS) and npm installed. Then run:
