@@ -58,22 +58,41 @@ This project demonstrates how to publish Farcaster casts using [Neynar](https://
 
    The server will run at `http://localhost:3000` (or the port you specified).
 
-6. **Test the Cast Endpoint**  
-   To publish a cast, send a POST request:
+## Usage
 
-   ```bash
-   curl -X POST http://localhost:3000/cast \
-     -H "Content-Type: application/json" \
-     -d '{"text":"Hello Farcaster!"}'
-   ```
+### Publishing a Simple Text Cast
 
-   If successful, you’ll receive:
+Send a POST request to `/cast` with a JSON body containing the `text` field:
 
-   ```json
-   { "message": "Cast submitted successfully" }
-   ```
+```bash
+curl -X POST http://localhost:3000/cast \
+  -H "Content-Type: application/json" \
+  -d '{"text":"Hello Farcaster!"}'
+```
 
-   Your Farcaster cast should appear under the signer’s identity shortly.
+If successful, you’ll receive:
+
+```json
+{ "message": "Cast submitted successfully" }
+```
+
+### Publishing a Cast with Frames/Embeds
+
+To include frames (e.g., images, NFTs, links), add an `embeds` array with URLs:
+
+```bash
+curl -X POST http://localhost:3000/cast \
+  -H "Content-Type: application/json" \
+  -d '{"text":"Check out this awesome frame!", "embeds":["https://example.com/my-frame"]}'
+```
+
+If successful:
+
+```json
+{ "message": "Cast with frames submitted successfully" }
+```
+
+Farcaster clients will attempt to render the provided URL as a rich embed.
 
 ## Development Mode
 
