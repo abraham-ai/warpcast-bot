@@ -2,10 +2,17 @@ import neynarClient from "./neynarClient";
 import { SIGNER_UUID } from "./config";
 import { isApiErrorResponse } from "@neynar/nodejs-sdk";
 
-export async function publishCast(text: string): Promise<void> {
+export async function publishCastWithFrames(
+  text: string,
+  embeds?: string[]
+): Promise<void> {
   try {
-    await neynarClient.publishCast({ signerUuid: SIGNER_UUID, text });
-    console.log("Cast published successfully");
+    await neynarClient.publishCast({
+      signerUuid: SIGNER_UUID,
+      text,
+      embeds: embeds?.map((url) => ({ url })),
+    });
+    console.log("Cast with frames published successfully");
   } catch (err) {
     if (isApiErrorResponse(err)) {
       console.error("Neynar API Error:", err.response.data);
