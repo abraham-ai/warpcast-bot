@@ -83,7 +83,7 @@ To include frames (e.g., images, NFTs, links), add an `embeds` array with URLs:
 ```bash
 curl -X POST http://localhost:3000/cast \
   -H "Content-Type: application/json" \
-  -d '{"text":"Check out this awesome frame!", "embeds":["https://example.com/my-frame"]}'
+  -d '{"text":"A mesmerizing journey through an ever-evolving mandelbrot set where consciousness itself appears to fragment and replicate, with each iteration revealing new layers of geometric complexity and mathematical beauty that mirrors the depths of human awareness.", "embeds":["https://abraham.ai/frames/674a1f237d889a0d04a06fd8"]}'
 ```
 
 If successful:
